@@ -1,4 +1,8 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+import Favorites from './pages/Favorites'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -6,8 +10,11 @@ function App() {
   return (
 
     <div>
-    <p>Hello world</p>
-
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/favorites' element={<Favorites/>} />
+    </Routes>
     </div> 
 
   )
